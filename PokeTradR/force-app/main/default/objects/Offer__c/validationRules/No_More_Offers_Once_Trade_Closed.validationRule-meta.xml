@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_More_Offers_Once_Trade_Closed</fullName>
+    <active>true</active>
+    <description>Prevent more offers to be made when a trade is closed</description>
+    <errorConditionFormula>IF(ISPICKVAL(Trade__r.Status__c, &quot;Closed&quot;), ISNEW(), false)</errorConditionFormula>
+    <errorMessage>Cannot make any more offers to this Trade</errorMessage>
+</ValidationRule>

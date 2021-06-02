@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Negative_Stats</fullName>
+    <active>true</active>
+    <description>Preventing negative values for stats</description>
+    <errorConditionFormula>HP__c &lt; 0 || Attack__c  &lt; 0 || Defense__c &lt; 0 || Special_Attack__c  &lt; 0 || Special_Defense__c  &lt; 0 || Speed__c  &lt; 0</errorConditionFormula>
+    <errorMessage>There cannot be any negative base stats</errorMessage>
+</ValidationRule>
