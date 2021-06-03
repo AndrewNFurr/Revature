@@ -77,10 +77,7 @@
         <members>Yes_or_No</members>
         <name>GlobalValueSet</name>
     </types>
-    <types>
-    <members>*</members>
-        <name>CustomApplication</name>
-    </types>
+    
     <types>
     <members>*</members>
         <name>ConnectedApp</name>
