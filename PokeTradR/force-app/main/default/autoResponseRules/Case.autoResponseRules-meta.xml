@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Notice to New Case Complaint</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Reason</field>
+                <operation>equals</operation>
+                <value>Installation,Equipment Complexity,Performance,Breakdown,Equipment Design,Feedback,Other</value>
+            </criteriaItems>
+            <replyToEmail>fcberni@hotmail.com</replyToEmail>
+            <senderEmail>fcberni@hotmail.com</senderEmail>
+            <senderName>Frank Berni - Poke-TradR</senderName>
+            <template>unfiled$public/SupportCaseCreatedWebInquiries</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>
