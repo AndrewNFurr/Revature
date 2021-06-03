@@ -37,6 +37,14 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>Security</members>
         <name>Settings</name>
     </types>
