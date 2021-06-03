@@ -45,5 +45,22 @@
         <members>Lead</members>
         <name>AssignmentRules</name>
     </types>
+    <types>
+      <members>ObjectAPIName.PicklistAPIName</members>
+      <name>CustomField</name>
+  </types>
+  <types>
+      <members>GlobalPicklistAPIName</members>
+      <name>GlobalValueSet</name>
+  </types>
+  <types>
+    <members>Complaints_and_Cases</members>
+    <name>Queue</name>
+    </types>
+    <types>
+        <members>Lead_Queue</members>
+        <name>Queue</name>
+    </types>
+
     <version>51.0</version>
 </Package>
