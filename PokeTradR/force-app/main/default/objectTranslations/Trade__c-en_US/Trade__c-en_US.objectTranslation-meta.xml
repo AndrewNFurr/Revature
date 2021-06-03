@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trade</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trades</value>
+    </caseValues>
+    <layouts>
+        <layout>Trade Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Requesting</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <workflowTasks>
+        <name>Please_Review_Trade</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>
