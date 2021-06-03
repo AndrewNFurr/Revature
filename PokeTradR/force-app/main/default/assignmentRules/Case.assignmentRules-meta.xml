@@ -8,7 +8,7 @@
         <fullName>Standard</fullName>
         <active>false</active>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -27,7 +27,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -46,7 +46,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -65,7 +65,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.BillingCountry</field>
@@ -84,7 +84,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Account.Type</field>
