@@ -30,6 +30,14 @@
     </types>
     <types>
         <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
     <types>
@@ -76,10 +84,6 @@
     <types>
         <members>Yes_or_No</members>
         <name>GlobalValueSet</name>
-    </types>
-    <types>
-    <members>*</members>
-        <name>CustomApplication</name>
     </types>
     <types>
     <members>*</members>
