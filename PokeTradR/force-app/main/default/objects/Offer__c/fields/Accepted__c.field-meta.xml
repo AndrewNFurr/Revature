@@ -13,6 +13,11 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>Pending</fullName>
+                <default>true</default>
+                <label>Pending</label>
+            </value>
+            <value>
                 <fullName>Accepted</fullName>
                 <default>false</default>
                 <label>Accepted</label>
@@ -21,11 +26,6 @@
                 <fullName>Declined</fullName>
                 <default>false</default>
                 <label>Declined</label>
-            </value>
-            <value>
-                <fullName>Pending</fullName>
-                <default>false</default>
-                <label>Pending</label>
             </value>
         </valueSetDefinition>
     </valueSet>
