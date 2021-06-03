@@ -162,6 +162,6 @@
     </nameField>
     <pluralLabel>Trainers</pluralLabel>
     <searchLayouts></searchLayouts>
-    <sharingModel>Read</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
