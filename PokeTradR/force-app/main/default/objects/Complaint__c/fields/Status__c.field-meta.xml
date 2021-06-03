@@ -12,6 +12,11 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
                 <fullName>Pending</fullName>
                 <default>false</default>
                 <label>Pending</label>
@@ -25,11 +30,6 @@
                 <fullName>Not Approved</fullName>
                 <default>false</default>
                 <label>Not Approved</label>
-            </value>
-            <value>
-                <fullName>New</fullName>
-                <default>false</default>
-                <label>New</label>
             </value>
         </valueSetDefinition>
     </valueSet>
