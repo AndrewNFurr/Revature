@@ -45,5 +45,29 @@
         <members>Lead</members>
         <name>AssignmentRules</name>
     </types>
+    <types>
+    <members>Complaints_and_Cases</members>
+    <name>Queue</name>
+    </types>
+    <types>
+        <members>Lead_Queue</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Pokemon</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>Type1</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>Type2</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
+        <members>Yes_or_No</members>
+        <name>GlobalValueSet</name>
+    </types>
     <version>51.0</version>
 </Package>
