@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+		<members>*</members>
+		<name>ActionLinkGroupTemplate</name>
+	</types>
+         <name>ApexTrigger</name>
     </types>
     <types>
         <members>*</members>
@@ -40,8 +26,20 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>Security</members>
         <name>Settings</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>Flows</name>
     </types>
     <types>
         <members>Case</members>
@@ -49,8 +47,8 @@
         <name>AssignmentRules</name>
     </types>
     <types>
-    <members>Complaints_and_Cases</members>
-    <name>Queue</name>
+        <members>Complaints_and_Cases</members>
+        <name>Queue</name>
     </types>
     <types>
         <members>Lead_Queue</members>
@@ -74,8 +72,6 @@
     </types>
     <types>
     <members>*</members>
-        <name>CustomApplication</name>
-    </types>
-    <version>51.0</version>
->>>>>>> dd9f435c63281266fd0f7426df239360b46e7934
+        <name>ConnectedApp</name>
+	<version>46.0</version>
 </Package>
