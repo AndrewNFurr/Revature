@@ -47,6 +47,10 @@
         <name>Flows</name>
     </types>
     <types>
+        <members>*</members>
+        <name>FlowDefinitions</name>
+    </types>
+    <types>
         <members>Case</members>
         <members>Lead</members>
         <name>AssignmentRules</name>
