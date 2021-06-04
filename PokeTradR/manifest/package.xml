@@ -33,6 +33,9 @@
         <name>StaticResource</name>
     </types>
     <types>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>Account</members>
         <members>*</members>
         <name>CustomObject</name>
     </types>
