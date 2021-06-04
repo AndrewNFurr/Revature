@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+ <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>
@@ -30,11 +30,27 @@
     </types>
     <types>
         <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
     <types>
         <members>*</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
     </types>
     <types>
         <members>Security</members>
@@ -71,7 +87,7 @@
     </types>
     <types>
     <members>*</members>
-        <name>CustomApplication</name>
+        <name>ConnectedApp</name>
     </types>
     <version>51.0</version>
 </Package>
