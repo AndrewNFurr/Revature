@@ -7,7 +7,7 @@
          <name>ApexTrigger</name>
     </types>
     <types>
-        <members>*</members>
+        <members>*</members>.
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -23,6 +23,7 @@
         <members>Contact</members>
         <members>Account</members>
         <members>Product2</members>
+        <members>Trade__c</members>
         <members>*</members>
         <name>CustomObject</name>
     </types>
@@ -33,6 +34,10 @@
      <types>
         <members>*</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>Security</members>
@@ -74,5 +79,5 @@
     <types>
     <members>*</members>
         <name>ConnectedApp</name>
-	<version>46.0</version>
+	<version>48.0</version>
 </Package>
