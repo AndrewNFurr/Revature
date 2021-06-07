@@ -17,7 +17,7 @@
         <fullName>Standard</fullName>
         <active>false</active>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>anhuynh1624@cunning-koala-sders0.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
@@ -26,7 +26,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>fcberni@email.com</assignedTo>
+            <assignedTo>anhuynh1624@cunning-koala-sders0.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>

@@ -1,0 +1,53 @@
+<apex:page standardController="Trainer__c"  docType="html-5.0">
+    <apex:form >
+    	<apex:pageBlock >
+            <apex:pageBlockSection >
+                 <h1>
+                    Trainer Profile
+                </h1>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:outputField value="{!Trainer__c.First_Name__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.Last_Name__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.Birthday__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.Gender__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.City__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.Country__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+                <apex:outputField value="{!Trainer__c.Bio__c}">
+                    <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                </apex:outputField>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                 <h1>
+                    Additional Information
+                </h1>
+            </apex:pageBlockSection>
+        	<apex:pageBlockSection >
+                <!-- Date Joined and Status need to be set when create a new trainer-->
+            	<apex:outputField value="{!Trainer__c.Status__c}" />
+                <apex:outputField value="{!Trainer__c.Rank__c}" />
+                <apex:outputField value="{!Trainer__c.Trades_Made__c}" />
+                <apex:outputField value="{!Trainer__c.Offers_Made__c}" />
+                <apex:outputField value="{!Trainer__c.Current_Offers__c}" />
+                <apex:outputField value="{!Trainer__c.Current_Trades__c}" />
+                <apex:outputField value="{!Trainer__c.Dated_Joined__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:commandButton value="Sign out"/>
+    </apex:form>
+</apex:page>
