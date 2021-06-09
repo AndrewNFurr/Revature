@@ -4,11 +4,15 @@ public class LoginClass {
     public Id myId{get;set;}
    
     public PageReference login(){
+        if(myusername == null || mypassword == null){
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Please input username/password.'));
+            return null;           
+        }   
     	List<Trainer__c> tusername = [SELECT Id, Name, Password__c FROM Trainer__c WHERE Name=:myusername LIMIT 1];
         if(tusername == null || tusername.size() == 0){
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Username does not exist'));
+            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Username does not exist.'));
             return null;           
-        }
+        }   
         else{
             if(mypassword == tusername[0].Password__c){
                 myId = tusername[0].Id;
@@ -18,7 +22,7 @@ public class LoginClass {
                 return page;
             }
             else{
-                System.debug('Password not matched');
+                System.debug('Username/Password incorrect');
                 return null;
             }           
         }       

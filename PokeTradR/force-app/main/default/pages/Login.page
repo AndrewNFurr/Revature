@@ -1,17 +1,16 @@
 <apex:page controller="LoginClass" docType="html-5.0">
     <apex:form >
-        <apex:pageBlock >
-            <apex:pageBlockSection >
-                <h3>
-                    Welcome to PokeTrade
-                </h3>
-            </apex:pageBlockSection>
+        <apex:pageBlock title="Welcome to PokeTrade">
             <apex:pageBlockSection >                              
-                <apex:outputLabel value="Username: " for="username"/>
-                <apex:inputText id="username" value="{!myusername}"/>
-                <apex:outputLabel value="Password: " for="password"/>
-                <apex:inputSecret value="{!mypassword}" id="password"/>
-                <apex:commandButton value="Login" action="{!login}">
+                <apex:inputText id="username" value="{!myusername}" label="Username"/>        
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+            	<apex:inputSecret value="{!mypassword}" id="password" label="Password"/>
+              
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+            	<apex:commandButton value="Login" action="{!login}">
                     <apex:param name="user" value="{!myId}"/>
                 </apex:commandButton>
                 <apex:commandButton value="Register" action="{!register}"/>

@@ -1,11 +1,19 @@
-<apex:page docType="html-5.0">
+<apex:page standardController="Trainer__c" extensions="RegisterExtension" docType="html-5.0">
     <apex:form >
-    	<apex:pageBlock >
+    	<apex:pageBlock title="Register">
             <apex:pageBlockSection >
-                <h1>
-                    This is Register Page
-                </h1>
+                <apex:inputField value="{!Trainer__c.Name}" id="username" label="Username"/>
+                <apex:inputField value="{!Trainer__c.First_Name__c}" id="firstname"/>
+                <apex:inputField value="{!Trainer__c.Password__c}" id="password"/>
+                <apex:inputField value="{!Trainer__c.Last_Name__c}" id="lastname"/>
+                <apex:inputField value="{!Trainer__c.Birthday__c}" id="birthday" label="Day of Birth"/>
+                <apex:inputField value="{!Trainer__c.Gender__c}" id="gender"/>
+                <apex:inputField value="{!Trainer__c.City__c}" id="city" />
+                <apex:inputField value="{!Trainer__c.Bio__c}" id="bio" />
+                <apex:inputField value="{!Trainer__c.Country__c}" id="country" />
+                <apex:commandButton value="Create" action="{!save}"/>
             </apex:pageBlockSection>
         </apex:pageBlock>
+        
     </apex:form>
 </apex:page>

@@ -38,7 +38,7 @@
                 </h1>
             </apex:pageBlockSection>
         	<apex:pageBlockSection >
-                <!-- Date Joined and Status need to be set when create a new trainer-->
+                <!-- Date Joined, Age and Status need to be set when create a new trainer-->
             	<apex:outputField value="{!Trainer__c.Status__c}" />
                 <apex:outputField value="{!Trainer__c.Rank__c}" />
                 <apex:outputField value="{!Trainer__c.Trades_Made__c}" />
