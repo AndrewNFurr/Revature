@@ -1,0 +1,27 @@
+<apex:page controller="PokemonSearchController"> 
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:form >
+                <apex:outputLabel value="Search for a Pokemon" for="pokemonInput"/>
+                &nbsp; <!--look this up for later-->
+                <apex:inputText value="{!pokemonName}" id="pokemonInput" size="1"/>
+                <br/>
+                <apex:commandButton value="Search Pokedex" action="{!searchForPokemon}"/>
+            </apex:form>
+        </apex:pageBlockSection>   
+        <apex:pageBlockTable value="{!pokemon}" var="poke" rendered="{!renderTable}">
+            <apex:column value="{!poke.Pokemon__c}"/>
+            <apex:column value="{!poke.Height_m__c}"/>
+            <apex:column value="{!poke.Weight_g__c}"/>
+            <apex:column value="{!poke.Type1__c}"/>
+            <apex:column value="{!poke.Type2__c}"/>
+            <apex:column value="{!poke.HP__c}"/>
+            <apex:column value="{!poke.Attack__c}"/>
+            <apex:column value="{!poke.Defense__c}"/>
+            <apex:column value="{!poke.Special_Attack__c}"/>
+            <apex:column value="{!poke.Special_Defense__c}"/>
+            <apex:column value="{!poke.Speed__c}"/>
+            <apex:column value="{!poke.Entry__c}"/>    
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

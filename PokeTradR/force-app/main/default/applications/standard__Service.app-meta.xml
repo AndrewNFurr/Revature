@@ -16,4 +16,5 @@
     <tabs>Pokemon__c</tabs>
     <tabs>Trade__c</tabs>
     <tabs>Complaint__c</tabs>
+    <tabs>Knowledge__kav</tabs>
 </CustomApplication>

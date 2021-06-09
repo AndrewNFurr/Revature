@@ -18,11 +18,15 @@
     <tabs>Pokemon__c</tabs>
     <tabs>Trade__c</tabs>
     <tabs>Complaint__c</tabs>
+    <tabs>Knowledge__kav</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Complaint__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Knowledge__kav</tab>
         </mappings>
         <mappings>
             <tab>Offer__c</tab>
