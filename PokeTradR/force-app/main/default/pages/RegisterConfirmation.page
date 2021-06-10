@@ -1,0 +1,15 @@
+<apex:page controller="RegisterBackToLogin" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock >
+        	<h1>
+            Your account has been created. <br/>
+            Please go back to login page.
+        	</h1>
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+        	<apex:commandButton action="{!backToLogin}" value="Back To Login"/>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

@@ -4,7 +4,7 @@ public class LoginClass {
     public Id myId{get;set;}
    
     public PageReference login(){
-        if(myusername == null || mypassword == null){
+        if(myusername == '' || mypassword == ''){
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Please input username/password.'));
             return null;           
         }   
@@ -22,7 +22,8 @@ public class LoginClass {
                 return page;
             }
             else{
-                System.debug('Username/Password incorrect');
+                ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,'Username/Password incorrect.'));
+               
                 return null;
             }           
         }       

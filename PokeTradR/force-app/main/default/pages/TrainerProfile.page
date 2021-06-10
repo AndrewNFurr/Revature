@@ -1,4 +1,4 @@
-<apex:page standardController="Trainer__c"  docType="html-5.0">
+<apex:page standardController="Trainer__c" extensions="TrainerProfileExtension" docType="html-5.0">
     <apex:form >
     	<apex:pageBlock >
             <apex:pageBlockSection >
@@ -48,6 +48,7 @@
                 <apex:outputField value="{!Trainer__c.Dated_Joined__c}" />
             </apex:pageBlockSection>
         </apex:pageBlock>
-        <apex:commandButton value="Sign out"/>
+        <apex:commandButton value="Save Changes" action="{!quicksave}"/>
+        <apex:commandButton value="Sign out" action="{!login}"/>
     </apex:form>
 </apex:page>

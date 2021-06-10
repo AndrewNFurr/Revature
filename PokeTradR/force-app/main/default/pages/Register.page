@@ -2,17 +2,20 @@
     <apex:form >
     	<apex:pageBlock title="Register">
             <apex:pageBlockSection >
-                <apex:inputField value="{!Trainer__c.Name}" id="username" label="Username"/>
-                <apex:inputField value="{!Trainer__c.First_Name__c}" id="firstname"/>
-                <apex:inputField value="{!Trainer__c.Password__c}" id="password"/>
-                <apex:inputField value="{!Trainer__c.Last_Name__c}" id="lastname"/>
-                <apex:inputField value="{!Trainer__c.Birthday__c}" id="birthday" label="Day of Birth"/>
+                <apex:inputField value="{!Trainer__c.Name}" id="username" label="Username" required="true"/>
+                <apex:inputField value="{!Trainer__c.First_Name__c}" id="firstname" required="true"/>
+                <apex:inputSecret value="{!Trainer__c.Password__c}" id="password" required="true"/>
+                <apex:inputField value="{!Trainer__c.Last_Name__c}" id="lastname" required="true"/>
+                <apex:inputField value="{!Trainer__c.Birthday__c}" id="birthday" label="Day of Birth" required="true"/>
                 <apex:inputField value="{!Trainer__c.Gender__c}" id="gender"/>
                 <apex:inputField value="{!Trainer__c.City__c}" id="city" />
                 <apex:inputField value="{!Trainer__c.Bio__c}" id="bio" />
                 <apex:inputField value="{!Trainer__c.Country__c}" id="country" />
-                <apex:commandButton value="Create" action="{!save}"/>
+                <apex:commandButton value="Create" action="{!fillInAdditionalInfo}"/>
             </apex:pageBlockSection>
+           
+            	<apex:pageMessages ></apex:pageMessages>
+            
         </apex:pageBlock>
         
     </apex:form>
