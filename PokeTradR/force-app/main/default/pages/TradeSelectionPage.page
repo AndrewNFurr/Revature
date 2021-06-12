@@ -1,0 +1,14 @@
+<apex:page standardController="Trade__c" extensions="TradeExtension" recordSetVar="trades" docType="html-5.0" lightningStylesheets="true">
+   <apex:form >
+    <apex:pageBlock >
+    	<apex:pageBlockTable value="{!trades}" var="tra">
+            <apex:column value="{!tra.Name}" />
+            <apex:column >
+            	<apex:commandLink action="{!goToTrade}" value="View Trade">
+                    <apex:param assignTo="{!currentId}" name="current" value="{!tra.Id}" />
+                </apex:commandLink>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
