@@ -6,6 +6,7 @@
 	</types>
          <name>ApexTrigger</name>
     </types>
+    
     <types>
         <members>*</members>
         <name>AuraDefinitionBundle</name>
@@ -72,7 +73,12 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
-    <members>*</members>
+        <members>*</members>
         <name>ConnectedApp</name>
-	<version>46.0</version>
+    </types>
+    </types>
+         <members>*</members>
+         <name>ApexPage</name>
+    </types>
+	<version>43.0</version>
 </Package>
