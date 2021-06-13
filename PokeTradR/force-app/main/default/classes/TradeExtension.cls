@@ -9,20 +9,25 @@ public class TradeExtension {
     }
    //Variables
     public static ID currentId {get; set;}
-    public Trade__c currTrade {get; set;}
+    public Trade__c currTrade {get; set ;}
     public Offer__c currOffer {get {
-        this.currOffer = [
-        	SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c
+          List<Offer__c> temp = [
+        	SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c, Owner__c
             FROM Offer__c
-            WHERE Accepted__c='Accepted'
+            WHERE Accepted__c='Accepted' AND Owner__c = :currTrade.Trainer_Name__c 
     ];   
+        if (temp.size()>0) {
+            this.currOffer = temp[0];
+        } else {
+            this.currOffer = null;
+        }
         return this.currOffer;
     } set;}
     
     public List<Offer__c> offers {get {
         if (this.offers == null && currTrade != null) {
             this.offers = [
-                SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c
+                SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c, Owner__c
                 FROM Offer__c
                 WHERE Trade__r.Id=:currTrade.Id
             ];
@@ -39,14 +44,15 @@ public class TradeExtension {
                     WHERE Id =:currOffer.Trainer_Name__c
                     LIMIT 1
                 ];
-            } else {
-            this.recipientTrainer = [
+            } 
+        } else {
+        this.recipientTrainer = [
                 SELECT Name, Id, Trainer_Id__c, Bio__c, Rank__c 
                 FROM Trainer__c 
                 WHERE Id =:currTrade.Recipient__c
                 LIMIT 1
             ];
-            }
+        
         }
         return this.recipientTrainer;
     }set;}
@@ -63,7 +69,6 @@ public class TradeExtension {
     public Component.Apex.OutputText getRecBio(){
         if(recipientTrainer != null){
             Component.Apex.OutputText ot = new Component.Apex.OutputText();
-            system.debug(recipientTrainer);
             ot.value = recipientTrainer[0].Bio__c;
                return ot; 
         }else{
@@ -73,7 +78,6 @@ public class TradeExtension {
     public Component.Apex.OutputText getRecName(){
         if(recipientTrainer != null){
             Component.Apex.OutputText ot = new Component.Apex.OutputText();
-            system.debug(recipientTrainer);
             ot.value = recipientTrainer[0].Name;
                return ot; 
         }else{
@@ -83,7 +87,6 @@ public class TradeExtension {
     public Component.Apex.OutputText getRecRank(){
         if(recipientTrainer != null){
             Component.Apex.OutputText ot = new Component.Apex.OutputText();
-            system.debug(recipientTrainer);
             ot.value = recipientTrainer[0].Rank__c;
                return ot; 
         }else{
@@ -93,7 +96,8 @@ public class TradeExtension {
     
     public void showMe() {
         system.debug(currTrade);
-        system.debug(recipientTrainer);
+        //system.debug(recipientTrainer);
+        system.debug(currOffer);
     }
     
     public void saveOfferChanges() {
