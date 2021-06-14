@@ -4,7 +4,9 @@ public class PokemonSearchController {
     public String pokemonName{get;set;}
     public Boolean renderTable{get;set;}
     public ApexPages.StandardSetController setController {get;set;}
-    public String testName = 'Test';
+    public string errorMessage {get;set;}
+    public Id myId{get;set;}
+    //public String testName = 'Test';
     //public static List<Pokemon__c> poke; 
     
     //Where our queried result will be stored
@@ -18,23 +20,33 @@ public class PokemonSearchController {
     }
     
     //User will input a pokemon name and it will return the pokedex entry on that particular one
-    public void searchForPokemon(){
-        
-        //Using string.escapeSingleQuotes to protect data in the org from malicious attempts
-        this.pokemonName = String.escapeSingleQuotes(this.pokemonName);
-        List<Pokemon__c> poke = Database.query('SELECT Id, Pokemon__c, Height_m__c, Weight_g__c, Type1__c, Type2__c, HP__c, Attack__c, Defense__c, Special_Attack__c, Special_Defense__c, Speed__c, Entry__c FROM Pokemon__c WHERE Pokemon__c=\''+
-                                               this.pokemonName+'\'');
-        system.debug(poke);
-        if(this.setController==null){
-            this.setController = new ApexPages.StandardSetController(poke);
-            system.debug(this.setController.getSelected());
-        }else{
-            this.setController.setSelected(poke);
-            system.debug(this.setController.getSelected());
-        }
-        if(this.renderTable != true){
-            this.renderTable = true;
-        }     
+    public void searchForPokemon(){ 
+        try{
+            //Using string.escapeSingleQuotes to protect data in the org from malicious attempts
+            this.pokemonName = String.escapeSingleQuotes(this.pokemonName);
+            List<Pokemon__c> poke = Database.query('SELECT Id, Pokemon__c, Height_m__c, Weight_g__c, Type1__c, Type2__c, HP__c, Attack__c, Defense__c, Special_Attack__c, Special_Defense__c, Speed__c, Entry__c FROM Pokemon__c WHERE Pokemon__c=\''+
+                                                   this.pokemonName+'\'');
+            system.debug(poke);
+            if(poke != null){
+                myId = poke[0].Id;
+            }
+            system.debug(myId);
+            system.debug(poke);
+            if(this.setController==null){
+                this.setController = new ApexPages.StandardSetController(poke);
+                this.setController.setSelected(poke); 
+                system.debug(this.setController.getSelected());
+            }else{
+                this.setController.setSelected(poke);
+                system.debug(this.setController.getSelected());
+            }
+            if(this.renderTable != true){
+                this.renderTable = true;
+            } 
+        }catch(Exception e){
+            this.errorMessage = 'Error';
+            this.pokemonName = Null;
+        } 
     }
     
     //public static void debug(){

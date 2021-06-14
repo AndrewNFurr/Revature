@@ -1,15 +1,43 @@
+<!--The search bar works, have to pressed the button twice to populate results-->
 <apex:page controller="PokemonSearchController"> 
+    <style type="text/css">
+        p {
+            background-color: tan;
+            border: 5px solid darkred;
+            border-radius: 3px;
+            display: flex;
+            font-size: 1.5em;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        #button{
+            font-size: medium;
+            align-items: center;
+        }
+        
+        h3{
+            border: 5px solid darkred;
+            border-radius: 3px;
+        }
+    
+    </style>
+    
+    
     <apex:pageBlock >
         <apex:pageBlockSection >
             <apex:form >
-                <apex:outputLabel value="Search for a Pokemon" for="pokemonInput"/>
-                &nbsp; <!--look this up for later-->
-                <apex:inputText value="{!pokemonName}" id="pokemonInput" size="1"/>
+                <p>
+                    <br/>
+                    <apex:outputLabel value="Search for a Pokemon" for="pokemonInput"/>
+                    &nbsp; <!--Gets rid of spacing. Used for style -->
+                    <apex:inputText value="{!pokemonName}" id="pokemonInput" size="8"/>
+                </p>
                 <br/>
-                <apex:commandButton value="Search Pokedex" action="{!searchForPokemon}"/>
+                    <apex:commandButton value="Search" action="{!searchForPokemon}"/>
             </apex:form>
         </apex:pageBlockSection>   
-        <apex:pageBlockTable value="{!pokemon}" var="poke" rendered="{!renderTable}">
+        <apex:pageBlockTable id="Result" value="{!pokemon}" var="poke" rendered="{!renderTable}">
             <apex:column value="{!poke.Pokemon__c}"/>
             <apex:column value="{!poke.Height_m__c}"/>
             <apex:column value="{!poke.Weight_g__c}"/>
