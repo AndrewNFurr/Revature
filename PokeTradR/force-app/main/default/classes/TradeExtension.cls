@@ -12,7 +12,7 @@ public class TradeExtension {
     public Trade__c currTrade {get; set ;}
     public Offer__c currOffer {get {
           List<Offer__c> temp = [
-        	SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c, Owner__c
+        	SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c, Owner__c, Level__c
             FROM Offer__c
             WHERE Accepted__c='Accepted' AND Owner__c = :currTrade.Trainer_Name__c 
     ];   
@@ -52,7 +52,6 @@ public class TradeExtension {
                 WHERE Id =:currTrade.Recipient__c
                 LIMIT 1
             ];
-        
         }
         return this.recipientTrainer;
     }set;}
