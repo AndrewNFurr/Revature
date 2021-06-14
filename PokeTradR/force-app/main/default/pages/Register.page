@@ -1,6 +1,41 @@
 <apex:page standardController="Trainer__c" extensions="RegisterExtension" docType="html-5.0">
+    <style type="text/css">
+        body{
+        background-image: url("https://images6.alphacoders.com/305/305896.jpg");
+        	
+        }
+        #general{
+        	position: fixed;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+        
+        	background-color: darkred;
+            border: 5px solid darkred;
+            align-items: center;
+        	width: 50%        	
+        }
+        #username{
+        	margin-left: 15%;
+    		margin-right: auto;
+    		width: 8em
+        }
+    	#title{
+        	font-weight: bold;
+        	font-size: 30px;
+        	text-align:center;
+        	color: white;
+        }
+        
+        
+    	
+    </style>
+    <div id="general">
     <apex:form >
-    	<apex:pageBlock title="Register">
+        <p id="title">
+            Register
+        </p>
+    	<apex:pageBlock >
             <apex:pageBlockSection >
                 <apex:inputField value="{!Trainer__c.Name}" id="username" label="Username" required="true"/>
                 <apex:inputField value="{!Trainer__c.First_Name__c}" id="firstname" required="true"/>
@@ -13,10 +48,8 @@
                 <apex:inputField value="{!Trainer__c.Country__c}" id="country" />
                 <apex:commandButton value="Create" action="{!fillInAdditionalInfo}"/>
             </apex:pageBlockSection>
-           
-            	<apex:pageMessages ></apex:pageMessages>
-            
+            	<apex:pageMessages ></apex:pageMessages>  
         </apex:pageBlock>
-        
     </apex:form>
+    </div>
 </apex:page>
