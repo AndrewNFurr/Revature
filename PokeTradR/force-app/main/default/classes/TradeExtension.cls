@@ -9,7 +9,8 @@ public class TradeExtension {
     }
    //Variables
     public static ID currentId {get; set;}
-    public Trade__c currTrade {get; set ;}
+    public Trade__c currTrade {get; set;}
+    // Get the Offer that was Accepted
     public Offer__c currOffer {get {
           List<Offer__c> temp = [
         	SELECT Name, Accepted__c, Pokemon__c, Money_Offered__c, Trainer_Name__c, Owner__c, Level__c
@@ -23,7 +24,7 @@ public class TradeExtension {
         }
         return this.currOffer;
     } set;}
-    
+    // Get list of offers for thre specific Trade
     public List<Offer__c> offers {get {
         if (this.offers == null && currTrade != null) {
             this.offers = [
@@ -34,7 +35,7 @@ public class TradeExtension {
         }
         return this.offers;
     }set;} 
-
+	// Set the recipient based on accepted offer
     public  List<Trainer__c> recipientTrainer {get {
         if (this.currTrade != null) {
             if (currOffer != null) {
@@ -64,7 +65,7 @@ public class TradeExtension {
 
         return pr;
     }
-    
+    // Next 3 methods - get info dynamically based on current Offer.
     public Component.Apex.OutputText getRecBio(){
         if(recipientTrainer != null){
             Component.Apex.OutputText ot = new Component.Apex.OutputText();
@@ -93,12 +94,12 @@ public class TradeExtension {
         }
     }
     
-    public void showMe() {
+    /*public void showMe() {
         system.debug(currTrade);
-        //system.debug(recipientTrainer);
+        system.debug(recipientTrainer);
         system.debug(currOffer);
-    }
-    
+    } */
+    // Save offer accept/decline to database
     public void saveOfferChanges() {
         List<Offer__C> updatedOffers = new List<Offer__c>();
         for (Offer__c o : offers) {

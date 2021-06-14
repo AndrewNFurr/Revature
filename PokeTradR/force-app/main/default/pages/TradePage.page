@@ -1,6 +1,5 @@
 <apex:page standardController="Trade__c" docType="html-5.0" extensions="TradeExtension" lightningStylesheets="true" >
-    <apex:form styleClass="form">
-        <style type="text/css">
+    <style type="text/css">
         #Trade-Block {
             	background-color: tan;
             	border: 5px solid darkred;
@@ -65,6 +64,7 @@
             	border-bottom: 5px solid darkred;
             }
     </style>
+    <apex:form styleClass="form">
         <apex:pageBlock >
             <div class="header">
                 <img src="{!$Resource.Trade}" height='100px' width='100px'/>
@@ -90,7 +90,6 @@
                         </main>
                         <section>
                             <span>Rank |<apex:dynamicComponent componentValue="{!RecRank}"/></span>
-                            
                             <apex:dynamicComponent componentValue="{!RecBio}"/>
                         </section>
                     </div>
@@ -124,7 +123,7 @@
             </apex:pageBlock>
             <apex:pageBlockButtons styleClass="button-block" location="bottom">
             	<apex:commandButton value="Accept/Decline" action="{!saveOfferChanges}" style="display:none" id="makeChoice" reRender="Trade-Block"/>
-                <apex:commandButton action="{!showMe}" value="currTrade" />
+                <!-- <apex:commandButton action="{!showMe}" value="currTrade" /> -->
             </apex:pageBlockButtons>
         </apex:pageBlock>
     </apex:form>
