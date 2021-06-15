@@ -44,7 +44,7 @@
         
         <apex:pageBlock >
             <div id="button">
-        	<apex:commandButton action="{!backToLogin}" value="Back To Login"/>
+        	<!--<apex:commandButton action="{!backToLogin}" value="Back To Login"/>-->
             </div>
         </apex:pageBlock>
                 

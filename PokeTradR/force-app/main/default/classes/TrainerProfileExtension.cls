@@ -3,7 +3,7 @@ public class TrainerProfileExtension {
      
 	}
     
-    public Pagereference login(){
-        return Page.Login;
-    }
+    //public Pagereference login(){
+        //return Page.Login;
+    //}
 }

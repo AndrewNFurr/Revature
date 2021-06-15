@@ -84,7 +84,7 @@
             </apex:pageBlockSection>
         </apex:pageBlock>
         <apex:commandButton value="Save Changes" action="{!quicksave}"/>
-        <apex:commandButton value="Sign out" action="{!login}"/>
+        <!--<apex:commandButton value="Sign out" action="{!login}"/>-->
     </apex:form>
     </div>
 </apex:page>
