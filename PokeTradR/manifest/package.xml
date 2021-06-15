@@ -92,5 +92,9 @@
          <members>*</members>
          <name>ApexPage</name>
     </types>
+    </types>
+         <members>*</members>
+         <name>StaticResource</name>
+    </types>
 	<version>51.0</version>
 </Package>
