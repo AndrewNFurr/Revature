@@ -1,0 +1,53 @@
+<apex:page controller="RegisterBackToLogin" docType="html-5.0">
+    <style type="text/css">
+        body{
+        background-image: url("https://images6.alphacoders.com/305/305896.jpg");
+        	
+        }
+        #general{
+        	position: fixed;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+        	
+        	background-color: darkred;
+            border: 5px solid darkred;
+            align-items: center;
+        	width: 50%
+        	padding: 20px 20px;
+
+        }
+        #title{
+        	font-weight: bold;
+        	font-size: 20px;
+        	text-align:center;
+        	color:gold;
+        	
+        }
+        #button{
+        	margin-left: auto;
+    		margin-right: auto;
+    		width: 30%;
+        }
+        
+        
+    	
+    </style>
+    <div id="general">
+    <apex:form >
+        
+        	<p id="title">
+            Your account has been created. <br/>
+            Please go back to login page.
+        	</p>
+        
+        
+        <apex:pageBlock >
+            <div id="button">
+        	<apex:commandButton action="{!backToLogin}" value="Back To Login"/>
+            </div>
+        </apex:pageBlock>
+                
+    </apex:form>
+    </div>
+</apex:page>
