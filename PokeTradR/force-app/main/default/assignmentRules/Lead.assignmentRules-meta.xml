@@ -26,9 +26,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-
             <assignedTo>oleandy1221@resilient-wolf-5y8hkp.com</assignedTo>
-
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>

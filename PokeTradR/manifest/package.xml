@@ -5,6 +5,7 @@
 		<name>ActionLinkGroupTemplate</name>
 	</types>
          <name>ApexTrigger</name>
+
     </types>
     
     <types>
@@ -34,6 +35,15 @@
         <members>Product2</members>
         <members>*</members>
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
     </types>
     <types>
         <members>*</members>
@@ -85,6 +95,7 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
+
         <members>*</members>
         <name>ConnectedApp</name>
     </types>
@@ -95,6 +106,7 @@
     </types>
          <members>*</members>
          <name>StaticResource</name>
+
     </types>
 	<version>51.0</version>
 </Package>
