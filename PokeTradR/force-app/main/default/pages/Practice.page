@@ -1,0 +1,18 @@
+<apex:page standardController="Trade__c" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Trade__c.Name}"/>
+                <apex:inputField value="{!Trade__c.Trainer_Name__c}"/>
+                <apex:inputField value="{!Trade__c.Status__c}"/>
+                <apex:inputField value="{!Trade__c.Requested_Price__c}"/>
+                <apex:inputField value="{!Trade__c.Requested_Type__c}"/>
+                <apex:inputField value="{!Trade__c.Requested_Pokemon__c}"/>
+                <apex:inputField value="{!Trade__c.Type1__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+            	<apex:commandButton action="{!save}" value="Make a Trade!"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

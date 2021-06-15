@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
+		<members>*</members>
+		<name>ActionLinkGroupTemplate</name>
+	</types>
+         <name>ApexTrigger</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
-    </types>
+    
     <types>
         <members>*</members>
         <name>AuraDefinitionBundle</name>
@@ -30,18 +17,43 @@
     </types>
     <types>
         <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
     <types>
         <members>Case</members>
         <members>Contact</members>
         <members>Account</members>
+        <members>Product2</members>
         <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
         <members>Security</members>
         <name>Settings</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>Flows</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinitions</name>
     </types>
     <types>
         <members>Case</members>
@@ -49,8 +61,8 @@
         <name>AssignmentRules</name>
     </types>
     <types>
-    <members>Complaints_and_Cases</members>
-    <name>Queue</name>
+        <members>Complaints_and_Cases</members>
+        <name>Queue</name>
     </types>
     <types>
         <members>Lead_Queue</members>
@@ -72,6 +84,13 @@
         <members>Yes_or_No</members>
         <name>GlobalValueSet</name>
     </types>
-   
-    <version>51.0</version>
+    <types>
+        <members>*</members>
+        <name>ConnectedApp</name>
+    </types>
+    </types>
+         <members>*</members>
+         <name>ApexPage</name>
+    </types>
+	<version>51.0</version>
 </Package>

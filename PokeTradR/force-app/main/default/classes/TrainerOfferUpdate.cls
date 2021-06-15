@@ -13,6 +13,7 @@ public class TrainerOfferUpdate {
                 if(tn.Current_Offers__c > to.Current_Offers__c){
                     tn.Offers_Made__c++;
                     updateList.add(tn);
+                    //extra
                }
             } 
         }
