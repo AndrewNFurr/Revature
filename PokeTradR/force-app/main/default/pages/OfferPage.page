@@ -1,0 +1,17 @@
+<apex:page standardController="Offer__c" docType="html-5.0" extensions="TradeExtension"  lightningStylesheets="true">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockSection >
+            	<apex:inputField value="{!Offer__c.Name}"/>
+                <apex:inputField value="{!Offer__c.Trade__c}"/>
+                <apex:inputField value="{!Offer__c.Trainer_Name__c}"/>
+                <apex:inputField value="{!Offer__c.Pokemon__c}"/>
+                <apex:inputField value="{!Offer__c.Money_Offered__c}"/>
+                <apex:inputField value="{!Offer__c.Level__c}"/>
+                <apex:inputField value="{!Offer__c.Accepted__c}"/>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!save}" value="Make Offer"/>
+        	<apex:outputLink value="https://resilient-wolf-5y8hkp-dev-ed--c.visualforce.com/apex/TradePage?core.apexpages.request.devconsole=1">Go to Trade</apex:outputLink>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

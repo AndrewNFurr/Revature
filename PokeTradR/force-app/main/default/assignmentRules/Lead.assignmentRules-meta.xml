@@ -17,7 +17,7 @@
         <fullName>Standard</fullName>
         <active>false</active>
         <ruleEntry>
-            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
+            <assignedTo>oleandy1221@resilient-wolf-5y8hkp.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
@@ -26,7 +26,7 @@
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>alyssarof2016@curious-unicorn-ga92ll.com</assignedTo>
+            <assignedTo>oleandy1221@resilient-wolf-5y8hkp.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
                 <field>Lead.Country</field>
