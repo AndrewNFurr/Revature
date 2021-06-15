@@ -5,6 +5,6 @@
     <label>Complaints and Cases</label>
     <queue>Complaints_and_Cases</queue>
     <sharedTo>
-        <allInternalUsers></allInternalUsers>
+        <allInternalUsers/>
     </sharedTo>
 </ListView>
