@@ -89,5 +89,9 @@
     <members>*</members>
         <name>ConnectedApp</name>
     </types>
+    <types>
+        <members>*o</members>
+        <name>ValidationRule</name>
+    </types>
     <version>51.0</version>
 </Package>

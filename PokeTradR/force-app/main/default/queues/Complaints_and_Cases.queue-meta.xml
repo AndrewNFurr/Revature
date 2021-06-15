@@ -3,10 +3,6 @@
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
     <name>Complaints and Cases</name>
     <queueMembers>
-        <roles>
-            <role>Administrator</role>
-            <role>Moderator</role>
-        </roles>
         <users>
             <user>alyssarof2016@curious-unicorn-ga92ll.com</user>
         </users>
