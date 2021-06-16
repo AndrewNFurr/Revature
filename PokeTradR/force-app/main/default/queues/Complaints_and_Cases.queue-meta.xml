@@ -3,10 +3,6 @@
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
     <name>Complaints and Cases</name>
     <queueMembers>
-        <roles>
-            <role>Administrator</role>
-            <role>Moderator</role>
-        </roles>
         <users>
             <user>oleandy1221@resilient-wolf-5y8hkp.com</user>
         </users>

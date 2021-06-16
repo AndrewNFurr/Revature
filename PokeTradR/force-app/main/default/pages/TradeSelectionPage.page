@@ -1,6 +1,12 @@
 <apex:page standardController="Trade__c" extensions="TradeExtension" recordSetVar="trades" docType="html-5.0" lightningStylesheets="true">
-   <apex:form >
-    <apex:pageBlock >
+    <style type='text/css'>
+    #table {
+    	color: yellow;
+    	background-color: darkred;
+    }
+    </style>
+    <apex:form >
+    <apex:pageBlock id="table">
     	<apex:pageBlockTable value="{!trades}" var="tra">
             <apex:column value="{!tra.Name}" />
             <apex:column >

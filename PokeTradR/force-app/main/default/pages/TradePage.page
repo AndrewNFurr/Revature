@@ -1,15 +1,13 @@
 <apex:page standardController="Trade__c" docType="html-5.0" extensions="TradeExtension" lightningStylesheets="true" >
-    <apex:form styleClass="form">
-        <style type="text/css">
+    <style type="text/css">
         #Trade-Block {
-            	background-color: whitesmoke;
+            	background-color: tan;
             	border: 5px solid darkred;
             	border-radius: 5px;
             	display: flex;
             	font-size: 2em;
-            }
-        .main {
-            	background-color: red;
+            	justify-content: space-around;
+            	align-items: center;
             }
         .header {
             	border-radius: 5px;
@@ -20,29 +18,32 @@
             	justify-content: space-between;
             	align-items: center;
             	margin-bottom: 10px;
+            	text-shadow: 2px 2px black;
             }
          h1 {
             	font-size: 48px;
             }
          section {
-            	
             	display: flex;
             	flex-direction: column;
             	width: 80%;
             	justify-content: space-between;
             	align-items: center;
+            	color: gold;
+            	background-color: darkred;
+            	width: 100%;
+            	height: 100%;
+            	padding: 5px;
+            }
+          main {
+            	color: darkred;
             }
          .button-block {
             	display: flex;
             	justify-content: center;
             	flex: direction: row;
             }
-          #Trade-Block {
-            	display: flex;
-            	flex-direction: row;
-            	justify-content: space-around;
-            	align-items: center
-            }
+          
          .Trainer-Block {
             	width: 400px;
             	height: 300px;
@@ -52,43 +53,60 @@
             	align-items: center;
             	border: 5px solid gold;
             	border-radius: 2px;
-            	background-color: darkred;
-            	color: gold;
+            	box-shadow: -1px 1px 0px 1px;
+            	text-shadow: 0.5px 0.5px darkred;
             }
          #arrow {
             	transform: rotate(90deg);
             }
          h2 {
-            	position: center;
-            	width: 10em;
-            	border: 2px solid gold;
-            	background-color: lightgray
+            	text-content: center;
+            	border-bottom: 5px solid darkred;
             }
     </style>
+    <apex:form styleClass="form">
         <apex:pageBlock >
             <div class="header">
                 <img src="{!$Resource.Trade}" height='100px' width='100px'/>
                 <h1>WELCOME TO THE TRADING CENTER</h1>
 				<img src="{!$Resource.Trade}" height='100px' width='100px'/>
             </div>
+            <apex:outputPanel rendered="{!currOffer != null}">
             <div id="Trade-Block">
-                <div class="Trainer-Block">
-              		<h2><apex:outputField value="{!Trade__c.Trainer_Name__c}"/></h2> 
-                    <section>
-                        <span>Status: <apex:outputField value="{!Trade__c.Status__c}"/></span>
-                        <span>Price: <apex:outputField value="{!Trade__c.Requested_Price__c}"/></span>
-                        <span>Type: <apex:outputField value="{!Trade__c.Requested_Type__c}"/></span>
-                        <span>Pokemon: <apex:outputField value="{!Trade__c.Requested_Pokemon__c}"/></span>
-                    </section>
-                </div>
-                <img id="arrow"  src="{!$Resource.Arrow}" height='100px' width='100px' />
-                <div class="Trainer-Block">
-                    <h2><apex:outputField value="{!Trade__c.Recipient__c}"/></h2>
-                    <section>
-                        <apex:dynamicComponent componentValue="{!Rec}"/>
-                    </section>
-                </div>
+                    <div class="Trainer-Block">
+                        <main class='title'>
+                        	<h2><apex:outputField value="{!currOffer.Pokemon__c}"/></h2> 
+                        </main>
+                        <section>
+                            <span>Price |<apex:outputField value="{!currOffer.Money_Offered__c}"/></span>
+                            <span>Level |<apex:outputField value="{!currOffer.Level__c}"/></span>
+                            <span>Type |<apex:outputField value="{!Trade__c.Requested_Type__c}"/></span> 
+                        </section>
+                    </div>
+                    <img id="arrow"  src="{!$Resource.Arrow}" height='100px' width='100px' />
+                    <div class="Trainer-Block">
+                        <main class='title'>
+                        	<h2><apex:dynamicComponent componentValue="{!RecName}"/></h2>
+                        </main>
+                        <section>
+                            <span>Rank |<apex:dynamicComponent componentValue="{!RecRank}"/></span>
+                            <apex:dynamicComponent componentValue="{!RecBio}"/>
+                        </section>
+                    </div>
             </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!currOffer == null}">
+            <div id="Trade-Block">
+                    <div class="Trainer-Block">
+                        <h2><apex:outputField value="{!Trade__c.Trainer_Name__c}"/></h2> 
+                        <section>
+                            <span>Price |<apex:outputField value="{!Trade__c.Requested_Price__c}"/></span>
+                            <span>Type |<apex:outputField value="{!Trade__c.Requested_Type__c}"/></span>
+                            <span>Initial Rec |<apex:outputField value="{!Trade__c.Recipient__c}"/></span>
+                        </section>
+                    </div>
+                </div>
+            </apex:outputPanel>
             <apex:pageBlock >
                 <apex:pageBlockTable value="{!offers}" var="off" >
                     <apex:column value="{!off.Name}" />
@@ -104,8 +122,8 @@
                 </apex:pageBlockTable>
             </apex:pageBlock>
             <apex:pageBlockButtons styleClass="button-block" location="bottom">
-            	<apex:commandButton value="Accept/Decline" action="{!saveOfferChanges}" style="display:none" id="makeChoice" />
-                <apex:commandButton action="{!showMe}" value="currTrade" />
+            	<apex:commandButton value="Accept/Decline" action="{!saveOfferChanges}" style="display:none" id="makeChoice" reRender="Trade-Block"/>
+                <!-- <apex:commandButton action="{!showMe}" value="currTrade" /> -->
             </apex:pageBlockButtons>
         </apex:pageBlock>
     </apex:form>

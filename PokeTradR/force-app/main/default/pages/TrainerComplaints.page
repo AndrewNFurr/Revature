@@ -1,0 +1,128 @@
+<apex:page showHeader="false" standardController="Complaint__c" extensions="TrainerSearchExtension" docType="html-5.0" lightningStylesheets="true">
+<style text="text/css">
+        h1 {
+         font-size: 3.5em;
+        text-align: center;
+        background-color: darkred;
+        color: gold;
+        padding-left: 1.25em;
+        padding-right: 1.25em;
+    	margin-top: -0.9em;
+    	box-shadow: -1px 0px 2px 3px;
+        text-shadow: 0.5px 4px black;
+    	letter-spacing: 0.15em;
+        }
+        
+        #form1, #form2 {
+        border-left: 3px dashed gold;
+        border-right: 3px dashed gold;
+        border-top: 3px dashed gold;
+        width: 65%;
+    	height: 50%;
+        border-radius: 1%;
+    	margin: 0 auto;
+        }
+        
+        h2{
+         margin: 0.5em 27em;
+        font-size: 0.55em;
+    	color: black;
+        }
+    
+    	#h22{
+    	color:gold;
+    font-size: 1em;
+    }
+    
+    	h3{
+    		font-size: 0.85em;
+    		color: black;
+    	}
+        
+        body{
+        border: 5px solid gold;
+        border-radius: 5px;
+        font-size: 1em;
+    	color: black;
+    background-image: url("https://images6.alphacoders.com/305/305896.jpg");
+    	background-repeat: repeat;
+    	width:100%;
+        }
+    
+    	#img1, #img2 {
+    		width: 1.5em;
+    		height: 1.5em;
+    		margin-top: 0.3em;
+    		transform: rotate(180deg);
+    	}
+    	#img1 {
+    	margin-right: 5em;
+    }
+    #img2 {
+    	margin-left: 5em;
+    }
+    span {
+    	color:red;
+    }
+    </style>
+    <h1>
+        <img id="img1" src ="{!$Resource.pokeballs1}"/>
+        Complaints
+        <img id="img2" src ="{!$Resource.pokeballs1}"/>
+    </h1>
+    <br/>
+    <h2 id="h22">
+        Having issues with another trainer? Use the form below to submit a complaint.
+    </h2>
+    <div id="form1">
+    <apex:form >
+        <apex:actionRegion >
+			<apex:pageBlock title="Complaint Information">
+            <apex:pageBlockSection columns="1">
+               <span>
+                <apex:outputField value="{!Complaint__c.Name}"/>
+                <apex:outputField value="{!Complaint__c.Status__c}"/>
+                <apex:inputField value="{!Complaint__c.Trainer_Reported__c}"/>
+                <apex:inputField value="{!Complaint__c.Trainer_Being_Reported__c}" label="Confirm Name of Trainer Being Reported"/>
+                <br/>
+                <apex:inputField value="{!Complaint__c.Reason__c}"/>
+                </span>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                
+                <apex:inputField value="{!Complaint__c.Issue__c}" />
+               
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!save}" value="Submit Complaint" />
+            <apex:commandButton action="{!cancel}" value="Cancel" />
+        </apex:pageBlock>
+        </apex:actionRegion>
+    </apex:form>
+</div>
+    	<div id ="form2">
+        <apex:form >
+            <apex:actionRegion >
+        <apex:pageBlock title="Trainer Complaint Checker">
+        <h3>
+            Want to check complaints against a trainer? Search their name below.
+    	</h3>
+            <br/>
+            <br/>
+            <apex:outputLabel for="userInputBox" value="Enter Trainer Name"/>
+        	<apex:inputText value="{!userInput}" id="userInputBox" />
+            <apex:commandButton action="{!returnMatchingComplaints}" value="Search Trainers"/>
+            <br/>
+            <apex:outputText value="{!errorMessage}" style="color: red" />
+            </apex:pageBlock>
+                <apex:pageBlock >
+        <apex:pageBlockTable value="{!searchComplaints}" var="a" rendered="{!isSearched}">
+            <apex:column value="{!a.Trainer_Reported__c}"/>
+            <apex:column value="{!a.Status__c}"/>
+            <apex:column value="{!a.Reason__c}"/>
+            <apex:column value="{!a.Issue__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+                </apex:actionRegion>
+    </apex:form>
+    </div>
+</apex:page>

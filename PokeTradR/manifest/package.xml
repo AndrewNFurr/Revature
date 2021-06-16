@@ -5,6 +5,7 @@
 		<name>ActionLinkGroupTemplate</name>
 	</types>
          <name>ApexTrigger</name>
+
     </types>
     
     <types>
@@ -14,6 +15,14 @@
     <types>
         <members>*</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Workflow</name>
     </types>
     <types>
         <members>*</members>
@@ -30,6 +39,15 @@
     <types>
         <members>*</members>
         <name>GlobalPicklist</name>
+
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>GlobalPicklist</name>
     </types>
      <types>
         <members>*</members>
@@ -42,6 +60,10 @@
      <types>
         <members>*</members>
         <name>Flows</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinitions</name>
     </types>
     <types>
         <members>Case</members>
@@ -73,6 +95,7 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
+
         <members>*</members>
         <name>ConnectedApp</name>
     </types>
@@ -80,5 +103,10 @@
          <members>*</members>
          <name>ApexPage</name>
     </types>
-	<version>43.0</version>
+    </types>
+         <members>*</members>
+         <name>StaticResource</name>
+
+    </types>
+	<version>51.0</version>
 </Package>

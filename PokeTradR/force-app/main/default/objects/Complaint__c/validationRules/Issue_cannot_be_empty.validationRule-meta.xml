@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_cannot_be_empty</fullName>
+    <active>true</active>
+    <description>Issue section of complaint cannot be left blank.</description>
+    <errorConditionFormula>Issue__c == &apos;&apos;</errorConditionFormula>
+    <errorDisplayField>Issue__c</errorDisplayField>
+    <errorMessage>Please explain your issue with this trainer.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrainerBeingReportedCannotBeEmpty</fullName>
+    <active>true</active>
+    <errorConditionFormula>Trainer_Being_Reported__c == &apos;&apos; ||
+ Trainer_Being_Reported__c == &apos; &apos;</errorConditionFormula>
+    <errorDisplayField>Trainer_Being_Reported__c</errorDisplayField>
+    <errorMessage>Please fill in the Trainer name you are reporting.</errorMessage>
+</ValidationRule>

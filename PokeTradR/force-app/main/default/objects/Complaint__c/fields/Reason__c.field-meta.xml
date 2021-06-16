@@ -4,7 +4,7 @@
     <description>Reasoning for the complaint</description>
     <externalId>false</externalId>
     <label>Reason</label>
-    <required>false</required>
+    <required>true</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>MultiselectPicklist</type>
